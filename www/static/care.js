@@ -46,7 +46,7 @@ function onErrorWq(error) {
 //var apipath="http://e.businesssolutionapps.com/planbd2/syncmobile_150813/";
 
 //--- local
-var apipath="http://127.0.0.1:8000/care/syncmobile/";
+var apipath="http://e3.businesssolutionapps.com/care/syncmobile/";
 
 
 var planFlag=0;
@@ -2547,7 +2547,7 @@ function uploadPhotoAch(imageURI, imageName) {
     options.params = params;
 
     var ft = new FileTransfer();
-	ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/care/care_image_sync/fileUploader/"),winAch,fail,options);
+	ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/care_upload/fileUploader/"),winAch,fail,options);
 	//ft.upload(imageURI, encodeURI("http://127.0.0.1:8000/welcome/wab_sync/fileUploader/"),winAch,fail,options);
 	
 }
