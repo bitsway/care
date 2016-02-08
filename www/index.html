@@ -40,9 +40,9 @@
 <!-- MAIN MENU ----------------------------------------------------------------------------- -->
 <div data-role="page" data-theme="d" id="reportType" style="overflow:scroll;" >
     <div data-theme="d" data-role="header" data-position="fixed" >
-        <a data-role="button" href="#leftpanel" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
+        <a data-role="button" href="#leftpanel" ><img src="menu.png"></a>
         
-        <a data-role="button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-power ui-btn-icon-notext " onClick="exit();" >Exit </a>
+        <a data-role="button" onClick="exit();" ><img src="exit.png"> </a>
         <h3>Select Field </h3>
     </div>
     <div data-role="content">
@@ -82,8 +82,9 @@
 <!-- REPORT ----------------------------------------------------------------------------- -->
 <div data-theme="d" data-role="page" id="reportPage" style="overflow:scroll;" >
     <div data-theme="d" data-role="header" data-position="fixed" >
-        <a data-role="button" onClick="waterAidClick();"  data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
-        <a data-role="button" onclick="backClick();" data-rel="back"  data-icon="arrow-l" data-iconpos="left" class="ui-btn-right" data-transition="slide">Back</a>
+        <a data-role="button" onClick="waterAidClick();"  ><img src="menu.png"></a>        
+        
+        <a onclick="backClick();" data-rel="back" data-iconpos="left" class="ui-btn-right"><img src="back1.png"></a>
         <h3>Show Report</h3>
     </div>
     <div data-role="content">
@@ -112,8 +113,8 @@
 <!-- ACHIVEMENT REVIEW ----------------------------------------------------------------------------- -->
 <div data-theme="d" data-role="page" id="reviewDataList" style="overflow:scroll;">
     <div data-theme="d" data-role="header" data-position="fixed" >
-        <a data-role="button" onClick="waterAidClick();"  data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
-        <a data-role="button" onclick="backClick();" data-rel="back"  data-icon="arrow-l" data-iconpos="left" class="ui-btn-right" data-transition="slide">Back</a>
+        <a data-role="button" onClick="waterAidClick();"   ><img src="menu.png"></a>
+        <a onclick="backClick();" data-rel="back" data-iconpos="left" class="ui-btn-right"><img src="back1.png"></a>
         <h3>Review Data list</h3>
     </div>
     <div data-role="content">
@@ -129,7 +130,7 @@
 <!-- ------------------- sync page---------------------------------------------------------------------------------------- -->
 <div data-theme="d" data-role="page" id="pagesync" style="overflow:scroll;" >
     <div data-theme="d" data-role="header" data-position="fixed" >
-        <a data-role="button" onClick="waterAidClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
+        <a data-role="button" onClick="waterAidClick();"  ><img src="menu.png"></a>
         <h3>Sync</h3>
     </div>
     <div data-role="content">
@@ -162,7 +163,7 @@
 <!-- Achivement - select plan list page---------------------------------------- -->
 <div data-role="page" id="planList" data-theme="d" style="overflow:scroll;" >
     <div data-theme="d" data-role="header" data-position="fixed" >
-    <a data-role="button" onClick="waterAidClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
+    <a data-role="button" onClick="waterAidClick();" ><img src="menu.png"></a>
         <!--<a data-role="button" data-rel="back"  data-icon="arrow-l" data-iconpos="left" class="ui-btn-right" data-transition="slide">Back</a>-->
         <h3>Select Indicator</h3>
     </div>
@@ -180,8 +181,8 @@
 <!-- --------------------------achive data list page----People Supported---------------------------------- -->
 <div data-role="page" id="achiveDataList" data-theme="d" style="overflow:scroll;" >
     <div data-theme="d" data-role="header" data-position="fixed" >
-    <a data-role="button" onClick="waterAidClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
-        <a data-role="button" onclick="backClick();" data-rel="back"  data-icon="arrow-l" data-iconpos="left" class="ui-btn-right" data-transition="slide">Back</a>
+    <a data-role="button" onClick="waterAidClick();" ><img src="menu.png"></a>
+        <a onclick="backClick();" data-rel="back" data-iconpos="left" class="ui-btn-right"><img src="back1.png"></a>
         <h3> Enter Population</h3>
     </div>
     <div data-role="content">
@@ -423,7 +424,7 @@
                     <tr>
                         <td width="100%" style="vertical-align:middle;" colspan="2">Completion Date<sup class="reqField">*</sup>                            
                             <div class="ui-grid-d">
-								<div class="ui-block-a">
+								<div class="ui-block-a" style="width:30%;">
                                 		<select name="san_or_hw_conp_y" id="san_or_hw_conp_y" data-native-menu="false" >
                                         	<option value="">Select Year</option>
                                             <option value="2015">2015</option>
@@ -431,7 +432,7 @@
                                         </select>                                		                                								
 								</div>
                                 <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-c">
+								<div class="ui-block-c" style="width:30%;">
                                 		<select class="inMonth" name="san_or_hw_conp_m" id="san_or_hw_conp_m" data-native-menu="false" >
                                         	<option value="">Select Month</option>
                                             <option value="01">01</option>
@@ -450,7 +451,7 @@
 								  										
 								</div>
                                 <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-e" >
+								<div class="ui-block-e" style="width:30%;" >
                                 		
                                 		<select name="san_or_hw_conp_d" id="san_or_hw_conp_d" data-native-menu="false" >
                                         	<option value="">Select Day</option>
@@ -660,7 +661,7 @@
                     <tr >
                         <td width="100%" style="vertical-align:middle;" colspan="2">Starting date<sup class="reqField">*</sup>							
 							 <div class="ui-grid-d">
-								<div class="ui-block-a">
+								<div class="ui-block-a" style="width:30%;" >
                                 		<select name="st_of_rehab_y" id="st_of_rehab_y" data-native-menu="false" >
                                         	<option value="">Select Year</option>
                                             <option value="2015">2015</option>
@@ -668,7 +669,7 @@
                                         </select>                                		                                								
 								</div>
                                 <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-c">
+								<div class="ui-block-c" style="width:30%;">
                                 		<select class="inMonth" name="st_of_rehab_m" id="st_of_rehab_m" data-native-menu="false" >
                                         	<option value="">Select Month</option>
                                             <option value="01">01</option>
@@ -687,7 +688,7 @@
 								  										
 								</div>
                                 <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-e" >
+								<div class="ui-block-e" style="width:30%;" >
                                 		
                                 		<select name="st_of_rehab_d" id="st_of_rehab_d" data-native-menu="false" >
                                         	<option value="">Select Day</option>
@@ -733,7 +734,7 @@
                     <tr>
                         <td width="100%" style="vertical-align:middle;" colspan="2">Completion Date<sup class="reqField">*</sup>				
                             <div class="ui-grid-d">
-								<div class="ui-block-a">
+								<div class="ui-block-a" style="width:30%;">
                                 		<select name="schWash_conp_y" id="schWash_conp_y" data-native-menu="false" >
                                         	<option value="">Select Year</option>
                                             <option value="2015">2015</option>
@@ -741,7 +742,7 @@
                                         </select>                                		                                								
 								</div>
                                 <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-c">
+								<div class="ui-block-c" style="width:30%;">
                                 		<select class="inMonth" name="schWash_conp_m" id="schWash_conp_m" data-native-menu="false" >
                                         	<option value="">Select Month</option>
                                             <option value="01">01</option>
@@ -760,7 +761,7 @@
 								  										
 								</div>
                                 <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-e" >
+								<div class="ui-block-e" style="width:30%;">
                                 		
                                 		<select name="schWash_conp_d" id="schWash_conp_d" data-native-menu="false" >
                                         	<option value="">Select Day</option>
@@ -837,7 +838,7 @@
                 <li class="ui-field-contain" style="background-color:#F2F2F2; font-weight:bold;">Date of declaration/certification<sup class="reqField">*</sup></li>
                 <li class="ui-field-contain">
                 	 <div class="ui-grid-d">
-                        <div class="ui-block-a">
+                        <div class="ui-block-a" style="width:30%;">
                                 <select name="dec_or_cer_y" id="dec_or_cer_y" data-native-menu="false" >
                                     <option value="">Select Year</option>
                                     <option value="2015">2015</option>
@@ -845,7 +846,7 @@
                                 </select>                                		                                								
                         </div>
                         <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-                        <div class="ui-block-c">
+                        <div class="ui-block-c" style="width:30%;">
                                 <select class="inMonth" name="dec_or_cer_m" id="dec_or_cer_m" data-native-menu="false" >
                                     <option value="">Select Month</option>
                                     <option value="01">01</option>
@@ -864,7 +865,7 @@
                                                                 
                         </div>
                         <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-                        <div class="ui-block-e" >
+                        <div class="ui-block-e" style="width:30%;" >
                                 
                                 <select name="dec_or_cer_d" id="dec_or_cer_d" data-native-menu="false" >
                                     <option value="">Select Day</option>
@@ -914,7 +915,7 @@
             
     </div>
            
-<div data-theme="d" data-role="footer" data-position="fixed" style="font-size:12px;background-color:#CCC;" align="center" >m-Reporting</div>
+<!--<div data-theme="d" data-role="footer" data-position="fixed" style="font-size:12px;background-color:#CCC;" align="center" >m-Reporting</div>-->
 </div>
 
 
@@ -923,7 +924,7 @@
 <!-- -------------achivment Submit page3 -------------------- -->
 <div data-role="page" id="inPhoto" style="overflow:scroll;" >
     <div data-theme="d" data-role="header" data-position="fixed" >
-    <a data-role="button" onClick="waterAidClick();" data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
+    <a data-role="button" onClick="waterAidClick();" ><img src="menu.png"></a>
         <!--<a data-role="button" data-rel="back"  data-icon="arrow-l" data-iconpos="left" class="ui-btn-right" data-transition="slide">Back</a>-->
         <h3>Achievement Data</h3>
   </div>
@@ -934,8 +935,8 @@
         <img src="" width="128" height="128" alt="Image" id="myImageA">
         <input name="achPhoto" id="achPhoto" value=""   type="hidden">
        <!-- <input name="achlocation" id="achlocation"   type="text">-->
-        <input name="ach_lat" id="ach_lat" value="1212"   type="hidden">
-        <input name="ach_long" id="ach_long" value="2323"  type="hidden">
+        <input name="ach_lat" id="ach_lat" value=""   type="hidden">
+        <input name="ach_long" id="ach_long" value=""  type="hidden">
         <a data-role="button" id="btn_ach_lat_long" onClick="getLocationInfoAch();" class="ui-btn" >Confirm Location</a>
 		<div class="errorChk" style="color:#F00;"></div>
         <div id="sucChk" style="color:#00CA00;"></div>
@@ -957,8 +958,8 @@
 <!-- ------------------- review list---------------------------------------------------------------------------------------- -->
 <div data-theme="d" data-role="page" id="selectionConfirmed" >
     <div data-theme="d" data-role="header" data-position="fixed" >
-        <a data-role="button" onClick="waterAidClick();"  data-icon="bullets" data-iconpos="left" class="ui-btn ui-shadow ui-corner-all ui-icon-bullets " ><img src="app-logo-small.jpg"></a>
-        <a data-role="button" onclick="backClick();" data-rel="back"  data-icon="arrow-l" data-iconpos="left" class="ui-btn-right" data-transition="slide">Back</a>
+        <a data-role="button" onClick="waterAidClick();"  ><img src="menu.png"></a>
+        <a onclick="backClick();" data-rel="back" data-iconpos="left" class="ui-btn-right"><img src="back1.png"></a>
         <h3> Confirm Selection</h3>
     </div>
     <div data-role="content">
