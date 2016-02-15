@@ -59,7 +59,7 @@
                 
             </ul>
     </div>
-    <div data-theme="d" data-role="footer" data-position="fixed" style="font-size:12px;background-color:#CCC;" align="center" >m-Reporting 20160202</div><!------/footer 20150401-20150309 -->
+    <div data-theme="d" data-role="footer" data-position="fixed" style="font-size:12px;background-color:#CCC;" align="center" >m-Reporting 20160215</div><!------/footer 20150401-20150309 -->
     
     <div data-role="panel" id="leftpanel" data-position="left" data-display="overlay" data-theme="d">
         <div align="center"><img src="app-logo.png"></div>
@@ -187,18 +187,19 @@
     </div>
     <div data-role="content">
        <!-- <div id="cboIdDiv"></div>-->
+       <br/>
 	   <div class="activities" style="background-color:#E6E6E6; font-weight:bold; word-wrap: break-word; box-shadow:0px 0px 5px; padding:10px 10px; border-radius:5px; margin-bottom:10px;"></div>
 	   
 		
 		
-        <ul data-role="listview" data-inset="true" data-theme="d" id="achWardOld">
+        <!--<ul data-role="listview" data-inset="true" data-theme="d" id="achWardOld">
             <li class="ui-field-contain" style="background-color:#F2F2F2; font-weight:bold;">
-                Ward(Old)<sup class="reqField">*</sup>             
+                Ward<sup class="reqField">*</sup>             
             </li>
 			<li class="ui-field-contain">               
 				<select name="achWord" id="achWord" data-native-menu="false">
 						<option value="">Ward(Old)</option>
-						<option value="01">01</option>
+						<option value="1">1</option>
 						<option value="02">02</option>
 						<option value="03">03</option>																				 												
 				  </select>	
@@ -223,7 +224,7 @@
         <ul data-role="listview" data-inset="true" data-theme="d" id="achWardNew">
             <li class="ui-field-contain" style="background-color:#F2F2F2; font-weight:bold;">Ward(New)<sup class="reqField">*</sup></li>
 			<li class="ui-field-contain">
-				<select name="achWordNew" id="achWordNew" data-native-menu="false">
+				<select name="achWordNew" id="achWordNew" data-native-menu="false" >
 						<option value="">Ward(New)</option>
 						<option value="01">01</option>
 						<option value="02">02</option>
@@ -236,9 +237,14 @@
 						<option value="09">09</option>																 												
 				  </select>	
             </li>
-        </ul>
+        </ul>-->
         
-        <ul data-role="listview" data-inset="true" data-theme="d" id="epiClusterCom" >
+        <div id="achWardNew"></div>
+        
+        <div id="achCommunity"></div>
+        
+        
+        <!--<ul data-role="listview" data-inset="true" data-theme="d" id="epiClusterCom" >
         	<li class="ui-field-contain com_or_cluster_name" style="background-color:#F2F2F2; font-weight:bold;"></li>
 			<li class="ui-field-contain">
                 <input name="epiComName" id="epiComName" placeholder="" value="" type="text" maxlength="50" >
@@ -247,17 +253,16 @@
 			<li class="ui-field-contain vill_para">
                 <input name="villSubClusName" id="villSubClusName" placeholder="" value="" type="text" maxlength="50" >
             </li>
-        </ul>
+        </ul>-->
         
         <ul data-role="listview" data-inset="true" data-theme="d" id="odfStatus">
             <li class="ui-field-contain" style="background-color:#F2F2F2; font-weight:bold;">ODF Status<sup class="reqField">*</sup></li>
 			<li class="ui-field-contain">
 				<select name="achOdfStatus" id="achOdfStatus" data-native-menu="false">
-						<option value="">ODF Status</option>
-						<option value="Declared">Declared</option>
-                        <option value="Certified">Certified</option>
-																				 												
-				  </select>	
+                    <option value="">ODF Status</option>
+                    <option value="Declared">Declared</option>
+                    <option value="Declared and Certified">Declared & Certified</option>																				 												
+				 </select>	
             </li>
         </ul>
         
@@ -596,16 +601,16 @@
                         <td width="5" align="left">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td width="70%" style="vertical-align:middle;">Only for boys<sup class="reqField">*</sup></td>
-                        <td width="30%"><input name="lat_boys" id="lat_boys" placeholder="" value="" min="0" onBlur="totalhwRehab();" type="number"></td>
+                        <td width="70%" style="vertical-align:middle;">For boys and male teachers<sup class="reqField">*</sup></td>
+                        <td width="30%"><input name="lat_boys" id="lat_boys" placeholder="" value="" min="0"  type="number"></td>
                         <td width="5" align="left">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td width="70%" style="vertical-align:middle;">Only for girls<sup class="reqField">*</sup></td>
-                        <td width="30%"><input name="lat_girls" id="lat_girls" placeholder="" value="" min="0" onBlur="totalhwRehab();" type="number"></td>
+                        <td width="70%" style="vertical-align:middle;">For girls and female teachers<sup class="reqField">*</sup></td>
+                        <td width="30%"><input name="lat_girls" id="lat_girls" placeholder="" value="" min="0"  type="number"></td>
                         <td width="5" align="left">&nbsp;</td>
                     </tr>
-                    <tr>
+                   <!-- <tr>
                         <td width="70%" style="vertical-align:middle;">Only for teachers<sup class="reqField">*</sup></td>
                         <td width="30%"><input name="lat_teacher" id="lat_teacher" placeholder="" value="" min="0" onBlur="totalhwRehab();" type="number"></td>
                         <td width="5" align="left">&nbsp;</td>
@@ -624,7 +629,7 @@
                         <td width="70%" style="vertical-align:middle;">Total</td>
                         <td width="30%"><input name="lat_total_population" id="lat_total_population"  placeholder="" value="" type="number" disabled="disabled"></td>
                         <td width="5" align="left"></td>
-                    </tr>    
+                    </tr>    -->
              </table>
              <table id="tbl_num_of_tap" class="ui-body-d ui-shadow table-stripe ui-responsive" data-role="table" data-theme="d"  data-mode="display:none" style="cell-spacing:0px;">
                   
@@ -808,30 +813,30 @@
                
                <tr>
                     <td width="70%" style="vertical-align:middle;">Number of HH<sup class="reqField">*</sup></td>
-                    <td width="30%"><input name="num_0f_hh" id="num_0f_hh" placeholder="" value="" min="0" onBlur="totalOdf();" type="number"></td>
+                    <td width="30%"><input name="num_0f_hh" id="num_0f_hh" placeholder="" value="" min="0" type="number"></td>
                     <td width="5" align="left">&nbsp;</td>
                 </tr>
              </table>
               
              <table class="ui-body-d ui-shadow table-stripe ui-responsive" data-role="table" data-theme="d"  data-mode="display:none" style="cell-spacing:0px;">   
-                <tr >
+               <!-- <tr >
                     <td colspan="3" ><strong>Number Of Population</strong></td>
-                </tr>
+                </tr>-->
                 <tr>
-                    <td width="70%" style="vertical-align:middle;">Adult<sup class="reqField">*</sup></td>
-                    <td width="30%"><input name="odf_adult" id="odf_adult" placeholder="" value="" onBlur="totalOdf();" min="0" type="number"></td>
+                    <td width="70%" style="vertical-align:middle;">Total Population<sup class="reqField">*</sup></td>
+                    <td width="30%"><input name="odf_adult" id="odf_adult" placeholder="" value="" min="0" type="number"></td>
                     <td width="5" align="left">&nbsp;</td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td width="70%" style="vertical-align:middle;">Children<sup class="reqField">*</sup></td>
                     <td width="30%"><input name="odf_child" id="odf_child" placeholder="" value="" min="0" onBlur="totalOdf();" type="number"></td>
                     <td width="5" align="left">&nbsp;</td>
                 </tr>
                  <tr >
-                    <td width="70%" style="vertical-align:middle;">Total</td>
-                    <td width="30%"><input name="odf_total" id="odf_total"  placeholder="" value="" type="number" disabled="disabled"></td>
+                    <td width="70%" style="vertical-align:middle;">Total Population</td>
+                    <td width="30%"><input name="odf_total" id="odf_total"  placeholder="" value="" min="0" type="number" ></td>
                     <td width="5" align="left"></td>
-                </tr> 
+                </tr> -->
             </table>
             
             <ul data-role="listview" data-inset="true" data-theme="d" >
