@@ -404,6 +404,8 @@ $(document).ready(function(){
 								
 		}else if(localStorage.achPlanSector=="CommunityODF"){
 			$("#achCommunity").show();
+			$("#myImageA").hide();
+			$("#btn_ach_lat_long").hide();			
 			
 			$(".vill_para").hide();			
 			$("#achWardOld").show();
@@ -701,7 +703,10 @@ function achDataNext(){
 				$("#rehab_wf").html("<strong>Installation of Group HWD</strong>");	
 			}						
 								
-		}else if(localStorage.achPlanSector=="CommunityODF"){			
+		}else if(localStorage.achPlanSector=="CommunityODF"){
+			$("#btn_ach_lat_long").hide();
+			
+			$("#myImageA").hide();			
 			$("#achWardOld").show();
 			$("#achCluster").show();
 			$("#epiClusterCom").show();
@@ -943,8 +948,8 @@ function achDataNext2(){
 	
 	}
 
-
-
+var achLatGirlsFemaleTeacher='';
+var achLatBoysMaleTeacher='';
 //-----------------------------achivement data people support
 
 function achivementDataPSupport(){
@@ -1093,6 +1098,10 @@ function achivementDataPSupport(){
 	
 	var latBoysGirls=$("#lat_boys_and_girls").val();
 	var latForAll=$("#lat_for_all").val();
+	
+	var latGirlsFemaleTeacher=$("#lat_girls_and_female_teacher").val();
+	var latBoysMaleTeacher=$("#lat_boys_and_male_teacher").val();
+	
 	
 	var chkBudget=$("input[name='sch_badget']:checked").val();
 	var anlBudget=$("#anl_budget_amt").val();
@@ -1484,6 +1493,11 @@ if (localStorage.achPlanSector=="Sanitation" || localStorage.achPlanSector=="Han
 							achLatBoysGirls=latBoysGirls
 							achLatForAll=latForAll
 							
+							
+							achLatGirlsFemaleTeacher=latGirlsFemaleTeacher
+							achLatBoysMaleTeacher=latBoysMaleTeacher
+							
+							
 							achChkBudget=chkBudget
 							achAnlBudget=anlBudget
 
@@ -1858,9 +1872,9 @@ function achiveDataSave(){
 				$("#btn_ach_submit").show();
 			}else{
 				
-								
+					
 				//achivementSave=achPlanId+'fdfd'+achCBOid+'fdfd'+achID+'fdfd'+achPopulation+'fdfd'+achHousehold+'fdfd'+achMale+'fdfd'+achFemale+'fdfd'+achGirlsUnder+'fdfd'+achBoysUnder+'fdfd'+achGirls+'fdfd'+achBoys+'fdfd'+achDapMale+'fdfd'+achDapFemale+'fdfd'+achPoorA+'fdfd'+achPoorB+'fdfd'+achPoorC+'fdfd'+achPoorEx+'fdfd'+achEthMale+'fdfd'+achEthFemale+'fdfd'+achServiceRecpt+'fdfd'+achPlanActivities+'fdfd'+achPhoto+'fdfd'+startDt+'fdfd'+latitude+'fdfd'+longitude+'fdfd'+achWord+'fdfd'+achHndEvent+'fdfd'+achCluster+'fdfd'+achLatType+'fdfd'+achComDate+'fdfd'+achWpTech+'fdfd'+achWpComDate		
-				achivementSave=localStorage.achPlanId+'fdfd'+achWord+'fdfd'+achCluster+'fdfd'+achWardNew+'fdfd'+achEpiComName+'fdfd'+achVillSubClusName+'fdfd'+achHhhName+'fdfd'+achID+'fdfd'+achPopulation+'fdfd'+achMale+'fdfd'+achFemale+'fdfd'+achGirls+'fdfd'+achBoys+'fdfd'+achDapMale+'fdfd'+achDapFemale+'fdfd'+achLatType+'fdfd'+achComDate+'fdfd'+achTypeOfSchool+'fdfd'+nameOfpSchool+'fdfd'+nameOfsSchool+'fdfd'+achSchGirl+'fdfd'+achSchBoy+'fdfd'+achTeachFemale+'fdfd'+achTeachMale+'fdfd'+achSchDFemale+'fdfd'+achSchDMale+'fdfd'+achSchRehabInsDate+'fdfd'+achSchWashCompDate+'fdfd'+achOdfStatus+'fdfd'+localStorage.achPlanActivities+'fdfd'+achPhoto+'fdfd'+localStorage.startDt+'fdfd'+latitude+'fdfd'+longitude+'fdfd'+achLatTypePast+'fdfd'+achRecHyMsg+'fdfd'+achLocationHwDev+'fdfd'+achAvailableHwdev+'fdfd'+achAvailableSoap+'fdfd'+achLatBoy+'fdfd'+achLatGirl+'fdfd'+achLatTeacher+'fdfd'+achNumOfTap+'fdfd'+achHH+'fdfd'+achOdfAdult+'fdfd'+achOdfChild+'fdfd'+achLatBoysGirls+'fdfd'+achLatForAll+'fdfd'+achChkBudget+'fdfd'+achAnlBudget+'fdfd'+achDateOfDecCer+'fdfd'+achCommunity		
+				achivementSave=localStorage.achPlanId+'fdfd'+achWord+'fdfd'+achCluster+'fdfd'+achWardNew+'fdfd'+achEpiComName+'fdfd'+achVillSubClusName+'fdfd'+achHhhName+'fdfd'+achID+'fdfd'+achPopulation+'fdfd'+achMale+'fdfd'+achFemale+'fdfd'+achGirls+'fdfd'+achBoys+'fdfd'+achDapMale+'fdfd'+achDapFemale+'fdfd'+achLatType+'fdfd'+achComDate+'fdfd'+achTypeOfSchool+'fdfd'+nameOfpSchool+'fdfd'+nameOfsSchool+'fdfd'+achSchGirl+'fdfd'+achSchBoy+'fdfd'+achTeachFemale+'fdfd'+achTeachMale+'fdfd'+achSchDFemale+'fdfd'+achSchDMale+'fdfd'+achSchRehabInsDate+'fdfd'+achSchWashCompDate+'fdfd'+achOdfStatus+'fdfd'+localStorage.achPlanActivities+'fdfd'+achPhoto+'fdfd'+localStorage.startDt+'fdfd'+latitude+'fdfd'+longitude+'fdfd'+achLatTypePast+'fdfd'+achRecHyMsg+'fdfd'+achLocationHwDev+'fdfd'+achAvailableHwdev+'fdfd'+achAvailableSoap+'fdfd'+achLatBoy+'fdfd'+achLatGirl+'fdfd'+achLatTeacher+'fdfd'+achNumOfTap+'fdfd'+achHH+'fdfd'+achOdfAdult+'fdfd'+achOdfChild+'fdfd'+achLatBoysGirls+'fdfd'+achLatForAll+'fdfd'+achChkBudget+'fdfd'+achAnlBudget+'fdfd'+achDateOfDecCer+'fdfd'+achCommunity+'fdfd'+achLatGirlsFemaleTeacher+'fdfd'+achLatBoysMaleTeacher		
 				
 				
 				if (localStorage.achPlanId==''){
@@ -1977,6 +1991,9 @@ function achiveDataSave(){
 						achLatBoysGirls='';
 						achLatForAll='';
 						
+						achLatGirlsFemaleTeacher='';
+						achLatBoysMaleTeacher='';
+						
 						achChkBudget='';
 						achAnlBudget='';
 						
@@ -2027,6 +2044,10 @@ function achiveDataSave(){
 						
 						$("#lat_boys_and_girls").val("");
 						$("#lat_for_all").val("");
+						
+						$("#lat_girls_and_female_teacher").val("");
+						$("#lat_boys_and_male_teacher").val("");
+						
 						
 						$("#lat_total_population").val("");
 						
@@ -2219,6 +2240,9 @@ function reviewAchiveData(){
 			
 			$("#lat_boys_and_girls").val("");
 			$("#lat_for_all").val("");
+			
+			$("#lat_girls_and_female_teacher").val("");
+			$("#lat_boys_and_male_teacher").val("");
 			
 			$("#lat_total_population").val("");
 			
@@ -2463,6 +2487,9 @@ function reviewDataNext(){
 			$("#cbo_combo").val(achRevDetailsArray[51]);
 		}
 		
+		
+		$("#lat_girls_and_female_teacher").val(achRevDetailsArray[52]);
+		$("#lat_boys_and_male_teacher").val(achRevDetailsArray[53]);
 	
 		$(".errorChk").text("");
 		var url = "#planList";
@@ -2521,15 +2548,16 @@ function achiveDataSubmit(){
 		}
 	}
 	
-	
+	achLatGirlsFemaleTeacher='';
+						achLatBoysMaleTeacher='';
 
 function syncDataAch(){	
 			
-			//alert(apipath+'submitAchiveData?cid=CARE&mobile_no='+localStorage.mobile_no+'&syncCode='+localStorage.sync_code+'&ach_plan_id='+localStorage.achPlanId+'&achWord='+achWord+'&achCluster='+achCluster+'&achWardNew='+achWardNew+'&achCommunity='+achCommunity+'&achEpiComName='+encodeURIComponent(achEpiComName)+'&achVillSubClusName='+encodeURIComponent(achVillSubClusName)+'&achHhhName='+encodeURIComponent(achHhhName)+'&achID='+achID+'&achPopulation='+achPopulation+'&achMale='+achMale+'&achFemale='+achFemale+'&achGirls='+achGirls+'&achBoys='+achBoys+'&achDapMale='+achDapMale+'&achDapFemale='+achDapFemale+'&achLatType='+encodeURIComponent(achLatType)+'&achLatTypePast='+encodeURIComponent(achLatTypePast)+'&achComDate='+achComDate+"&achTypeOfSchool="+achTypeOfSchool+"&achNameOfSchool="+encodeURIComponent(achNameOfSchool)+"&achSchGirl="+achSchGirl+"&achSchBoy="+achSchBoy+"&achTeachFemale="+achTeachFemale+"&achTeachMale="+achTeachMale+"&achSchDFemale="+achSchDFemale+"&achSchDMale="+achSchDMale+"&achSchRehabInsDate="+achSchRehabInsDate+"&achSchWashCompDate="+achSchWashCompDate+'&achOdfStatus='+achOdfStatus+'&achHH='+achHH+'&achOdfAdult='+achOdfAdult+'&achOdfChild='+achOdfChild+'&achLatBoy='+achLatBoy+'&achLatGirl='+achLatGirl+'&achLatTeacher='+achLatTeacher+'&achLatBoysGirls='+achLatBoysGirls+'&achLatForAll='+achLatForAll+'&achNumOfTap='+achNumOfTap+'&achRecHyMsg='+achRecHyMsg+'&achLocationHwDev='+achLocationHwDev+'&achAvailableHwdev='+achAvailableHwdev+'&achAvailableSoap='+achAvailableSoap+'&latitude='+latitude+'&longitude='+longitude+'&ach_photo='+imageName+'&ach_startDt='+encodeURIComponent(localStorage.startDt)+'&achChkBudget='+achChkBudget+'&achAnlBudget='+achAnlBudget );
+			//alert(apipath+'submitAchiveData?cid=CARE&mobile_no='+localStorage.mobile_no+'&syncCode='+localStorage.sync_code+'&ach_plan_id='+localStorage.achPlanId+'&achWord='+achWord+'&achCluster='+achCluster+'&achWardNew='+achWardNew+'&achCommunity='+achCommunity+'&achEpiComName='+encodeURIComponent(achEpiComName)+'&achVillSubClusName='+encodeURIComponent(achVillSubClusName)+'&achHhhName='+encodeURIComponent(achHhhName)+'&achID='+achID+'&achPopulation='+achPopulation+'&achMale='+achMale+'&achFemale='+achFemale+'&achGirls='+achGirls+'&achBoys='+achBoys+'&achDapMale='+achDapMale+'&achDapFemale='+achDapFemale+'&achLatType='+encodeURIComponent(achLatType)+'&achLatTypePast='+encodeURIComponent(achLatTypePast)+'&achComDate='+achComDate+"&achTypeOfSchool="+achTypeOfSchool+"&achNameOfSchool="+encodeURIComponent(achNameOfSchool)+"&achSchGirl="+achSchGirl+"&achSchBoy="+achSchBoy+"&achTeachFemale="+achTeachFemale+"&achTeachMale="+achTeachMale+"&achSchDFemale="+achSchDFemale+"&achSchDMale="+achSchDMale+"&achSchRehabInsDate="+achSchRehabInsDate+"&achSchWashCompDate="+achSchWashCompDate+'&achOdfStatus='+encodeURIComponent(achOdfStatus)+'&achHH='+achHH+'&achOdfAdult='+achOdfAdult+'&achOdfChild='+achOdfChild+'&achLatBoy='+achLatBoy+'&achLatGirl='+achLatGirl+'&achLatTeacher='+achLatTeacher+'&achLatBoysGirls='+achLatBoysGirls+'&achLatForAll='+achLatForAll+'&achLatGirlsFemaleTeacher='+achLatGirlsFemaleTeacher+'&achLatBoysMaleTeacher='+achLatBoysMaleTeacher+'&achNumOfTap='+achNumOfTap+'&achRecHyMsg='+achRecHyMsg+'&achLocationHwDev='+achLocationHwDev+'&achAvailableHwdev='+achAvailableHwdev+'&achAvailableSoap='+achAvailableSoap+'&latitude='+latitude+'&longitude='+longitude+'&ach_photo='+imageName+'&ach_startDt='+encodeURIComponent(localStorage.startDt)+'&achChkBudget='+achChkBudget+'&achAnlBudget='+achAnlBudget );
 			
 			$.ajax({
 					type: 'POST',
-					url:apipath+'submitAchiveData?cid=CARE&mobile_no='+localStorage.mobile_no+'&syncCode='+localStorage.sync_code+'&ach_plan_id='+localStorage.achPlanId+'&achWord='+achWord+'&achCluster='+achCluster+'&achWardNew='+achWardNew+'&achCommunity='+achCommunity+'&achEpiComName='+encodeURIComponent(achEpiComName)+'&achVillSubClusName='+encodeURIComponent(achVillSubClusName)+'&achHhhName='+encodeURIComponent(achHhhName)+'&achID='+achID+'&achPopulation='+achPopulation+'&achMale='+achMale+'&achFemale='+achFemale+'&achGirls='+achGirls+'&achBoys='+achBoys+'&achDapMale='+achDapMale+'&achDapFemale='+achDapFemale+'&achLatType='+encodeURIComponent(achLatType)+'&achLatTypePast='+encodeURIComponent(achLatTypePast)+'&achComDate='+achComDate+"&achTypeOfSchool="+achTypeOfSchool+"&achNameOfSchool="+encodeURIComponent(achNameOfSchool)+"&achSchGirl="+achSchGirl+"&achSchBoy="+achSchBoy+"&achTeachFemale="+achTeachFemale+"&achTeachMale="+achTeachMale+"&achSchDFemale="+achSchDFemale+"&achSchDMale="+achSchDMale+"&achSchRehabInsDate="+achSchRehabInsDate+"&achSchWashCompDate="+achSchWashCompDate+'&achOdfStatus='+achOdfStatus+'&achHH='+achHH+'&achOdfAdult='+achOdfAdult+'&achOdfChild='+achOdfChild+'&achLatBoy='+achLatBoy+'&achLatGirl='+achLatGirl+'&achLatTeacher='+achLatTeacher+'&achLatBoysGirls='+achLatBoysGirls+'&achLatForAll='+achLatForAll+'&achNumOfTap='+achNumOfTap+'&achRecHyMsg='+achRecHyMsg+'&achLocationHwDev='+achLocationHwDev+'&achAvailableHwdev='+achAvailableHwdev+'&achAvailableSoap='+achAvailableSoap+'&latitude='+latitude+'&longitude='+longitude+'&ach_photo='+imageName+'&ach_startDt='+encodeURIComponent(localStorage.startDt)+'&achChkBudget='+achChkBudget+'&achAnlBudget='+achAnlBudget+'&achDateOfDecCer='+achDateOfDecCer,
+					url:apipath+'submitAchiveData?cid=CARE&mobile_no='+localStorage.mobile_no+'&syncCode='+localStorage.sync_code+'&ach_plan_id='+localStorage.achPlanId+'&achWord='+achWord+'&achCluster='+achCluster+'&achWardNew='+achWardNew+'&achCommunity='+achCommunity+'&achEpiComName='+encodeURIComponent(achEpiComName)+'&achVillSubClusName='+encodeURIComponent(achVillSubClusName)+'&achHhhName='+encodeURIComponent(achHhhName)+'&achID='+achID+'&achPopulation='+achPopulation+'&achMale='+achMale+'&achFemale='+achFemale+'&achGirls='+achGirls+'&achBoys='+achBoys+'&achDapMale='+achDapMale+'&achDapFemale='+achDapFemale+'&achLatType='+encodeURIComponent(achLatType)+'&achLatTypePast='+encodeURIComponent(achLatTypePast)+'&achComDate='+achComDate+"&achTypeOfSchool="+achTypeOfSchool+"&achNameOfSchool="+encodeURIComponent(achNameOfSchool)+"&achSchGirl="+achSchGirl+"&achSchBoy="+achSchBoy+"&achTeachFemale="+achTeachFemale+"&achTeachMale="+achTeachMale+"&achSchDFemale="+achSchDFemale+"&achSchDMale="+achSchDMale+"&achSchRehabInsDate="+achSchRehabInsDate+"&achSchWashCompDate="+achSchWashCompDate+'&achOdfStatus='+encodeURIComponent(achOdfStatus)+'&achHH='+achHH+'&achOdfAdult='+achOdfAdult+'&achOdfChild='+achOdfChild+'&achLatBoy='+achLatBoy+'&achLatGirl='+achLatGirl+'&achLatTeacher='+achLatTeacher+'&achLatBoysGirls='+achLatBoysGirls+'&achLatForAll='+achLatForAll+'&achLatGirlsFemaleTeacher='+achLatGirlsFemaleTeacher+'&achLatBoysMaleTeacher='+achLatBoysMaleTeacher+'&achNumOfTap='+achNumOfTap+'&achRecHyMsg='+achRecHyMsg+'&achLocationHwDev='+achLocationHwDev+'&achAvailableHwdev='+achAvailableHwdev+'&achAvailableSoap='+achAvailableSoap+'&latitude='+latitude+'&longitude='+longitude+'&ach_photo='+imageName+'&ach_startDt='+encodeURIComponent(localStorage.startDt)+'&achChkBudget='+achChkBudget+'&achAnlBudget='+achAnlBudget+'&achDateOfDecCer='+achDateOfDecCer,
 					   
 					   success: function(result) {
 							//alert(result);
@@ -2583,7 +2611,7 @@ function syncDataAch(){
 						}else if(result=='Failed1'){
 							//$(".errorChk").text('Failed to Submit');
 							$(".errorChk").text('Try after 5 minutes');									
-							$("#btn_ach_submit").show();		
+							$("#btn_ach_submit").show();	
 						}else if(result=='Failed3'){
 							//$(".errorChk").text('Failed to Submit');
 							$(".errorChk").text('Invalid Ward');									
@@ -2688,7 +2716,7 @@ function onFailA(message) {
 //------------------------------------------------------------------------------
 //File upload 
 function uploadPhotoAch(imageURI, imageName) {	
-	winAch();
+	//winAch();
     var options = new FileUploadOptions();
     options.fileKey="upload";
 //    options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
@@ -2703,7 +2731,7 @@ function uploadPhotoAch(imageURI, imageName) {
     options.params = params;
 
     var ft = new FileTransfer();
-	ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/care_upload/"),winAch,fail,options);
+	ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/care_upload/fileUploader/"),winAch,fail,options);
 	//ft.upload(imageURI, encodeURI("http://127.0.0.1:8000/welcome/wab_sync/fileUploader/"),winAch,fail,options);
 	
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Planbd</title>
+    <title>CARE</title>
     
     <link rel="stylesheet" href="static/my.css" />
     <link rel="stylesheet" href="static/jquery.mobile-1.4.0.min.css" />
@@ -30,7 +30,8 @@
 	       
     <style>	
         .reqField{ color:#FF0000;}
-        .errorChk{ color:#FF0000; text-shadow:none;}				
+        .errorChk{ color:#FF0000; text-shadow:none;}
+						
     </style>	
 </head>
 
@@ -339,7 +340,7 @@
                         </fieldset>
                     </li>
                
-                    <li style="background-color:#F2F2F2;">Location of Hand washing device (within 5 meters)<sup class="reqField">*</sup></li>
+                    <li style="background-color:#F2F2F2; word-wrap:break-word!important; white-space:normal!important; ">Location of Hand washing device (within 5 meters)<sup class="reqField">*</sup></li>
                     <li class="ui-field-contain">
                         <fieldset data-role="controlgroup" data-type="horizontal">
                             <input type="radio" name="location_hw_dev" id="location_hw_dev_y" value="YES">
@@ -349,7 +350,7 @@
                         </fieldset>
                     </li>
                 
-                    <li style="background-color:#F2F2F2;">Availability of water into HW Device<sup class="reqField">*</sup></li>
+                    <li style="background-color:#F2F2F2; word-wrap:break-word!important; white-space:normal!important;">Availability of water into HW Device<sup class="reqField">*</sup></li>
                     <li class="ui-field-contain">
                         <fieldset data-role="controlgroup" data-type="horizontal">
                             <input type="radio" name="available_hw_dev" id="available_hw_dev_y" value="YES">
@@ -369,14 +370,14 @@
                         
                     </li>
                 </ul>
-               
+              <br/> 
           </div>      
-            <br/>			
+            			
 			<table class="ui-body-d ui-shadow table-stripe ui-responsive" id="tblFacilityCount"  data-role="table" data-theme="d"  data-mode="display:none" style="cell-spacing:0px;">
 				   
                     <tr id="trLatTypePast">
                         <td width="100%" style="vertical-align:middle;" colspan="2" > Type of Latrine(Past)<sup class="reqField">*</sup>
-							<select name="latTypePast" id="latTypePast" data-native-menu="false" >
+							<select name="latTypePast" id="latTypePast" data-native-menu="false" data-mini="true" >
 								 <option value="">Latrine Type(Past)</option>
                                  <optgroup label="Improved Latrine">
                                      <option value="Improved-Piped sewer system">Piped sewer system</option>						
@@ -402,7 +403,7 @@
                     </tr>
                     <tr id="trLatType">
                         <td width="100%" style="vertical-align:middle;" colspan="2" > Type of Latrine(Present)<sup class="reqField">*</sup>
-							<select name="latType" id="latType" data-native-menu="false" >
+							<select name="latType" id="latType" data-native-menu="false" data-mini="true" >
 								 <option value="">Latrine Type</option>
                                  <optgroup label="Improved Latrine">
                                      <option value="Improved-Piped sewer system">Piped sewer system</option>						
@@ -425,21 +426,24 @@
                                  
 							</select>							
 						</td>                        
-                    </tr>					                  
+                    </tr>
+                    </table>
+                    <br/>
+                    <table class="ui-body-d ui-shadow table-stripe ui-responsive" data-role="table" data-theme="d"  data-mode="display:none" style="cell-spacing:0px;">					                  
                     <tr>
                         <td width="100%" style="vertical-align:middle;" colspan="2">Completion Date<sup class="reqField">*</sup>                            
                             <div class="ui-grid-d">
-								<div class="ui-block-a" style="width:30%;">
-                                		<select name="san_or_hw_conp_y" id="san_or_hw_conp_y" data-native-menu="false" >
-                                        	<option value="">Select Year</option>
+								<div class="ui-block-a" style="width:33%;">
+                                		<select name="san_or_hw_conp_y" id="san_or_hw_conp_y" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Year</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                         </select>                                		                                								
 								</div>
-                                <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-c" style="width:30%;">
-                                		<select class="inMonth" name="san_or_hw_conp_m" id="san_or_hw_conp_m" data-native-menu="false" >
-                                        	<option value="">Select Month</option>
+                                <!--<div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+								<div class="ui-block-b" style="width:33%;">
+                                		<select class="inMonth" name="san_or_hw_conp_m" id="san_or_hw_conp_m" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Month</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -455,11 +459,11 @@
                                         </select>
 								  										
 								</div>
-                                <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-e" style="width:30%;" >
+                                <!--<div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+								<div class="ui-block-c" style="width:33%;" >
                                 		
-                                		<select name="san_or_hw_conp_d" id="san_or_hw_conp_d" data-native-menu="false" >
-                                        	<option value="">Select Day</option>
+                                		<select name="san_or_hw_conp_d" id="san_or_hw_conp_d" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Day</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -601,16 +605,16 @@
                         <td width="5" align="left">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td width="70%" style="vertical-align:middle;">For boys and male teachers<sup class="reqField">*</sup></td>
-                        <td width="30%"><input name="lat_boys" id="lat_boys" placeholder="" value="" min="0"  type="number"></td>
+                        <td width="70%" style="vertical-align:middle;">boys<sup class="reqField">*</sup></td>
+                        <td width="30%"><input name="lat_boys" id="lat_boys" placeholder="" value="" min="0" type="number"></td>
                         <td width="5" align="left">&nbsp;</td>
                     </tr>
                     <tr>
-                        <td width="70%" style="vertical-align:middle;">For girls and female teachers<sup class="reqField">*</sup></td>
-                        <td width="30%"><input name="lat_girls" id="lat_girls" placeholder="" value="" min="0"  type="number"></td>
+                        <td width="70%" style="vertical-align:middle;">girls<sup class="reqField">*</sup></td>
+                        <td width="30%"><input name="lat_girls" id="lat_girls" placeholder="" value="" min="0" type="number"></td>
                         <td width="5" align="left">&nbsp;</td>
                     </tr>
-                   <!-- <tr>
+                    <tr>
                         <td width="70%" style="vertical-align:middle;">Only for teachers<sup class="reqField">*</sup></td>
                         <td width="30%"><input name="lat_teacher" id="lat_teacher" placeholder="" value="" min="0" onBlur="totalhwRehab();" type="number"></td>
                         <td width="5" align="left">&nbsp;</td>
@@ -629,7 +633,17 @@
                         <td width="70%" style="vertical-align:middle;">Total</td>
                         <td width="30%"><input name="lat_total_population" id="lat_total_population"  placeholder="" value="" type="number" disabled="disabled"></td>
                         <td width="5" align="left"></td>
-                    </tr>    -->
+                    </tr>                     
+                    <tr>
+                        <td width="70%" style="vertical-align:middle;">For girls and female teachers<sup class="reqField">*</sup></td>
+                        <td width="30%"><input name="lat_girls_and_female_teacher" id="lat_girls_and_female_teacher" placeholder="" value="" min="0" type="number"></td>
+                        <td width="5" align="left">&nbsp;</td>
+                    </tr> 
+                    <tr>
+                        <td width="70%" style="vertical-align:middle;">For boys and male teachers<sup class="reqField">*</sup></td>
+                        <td width="30%"><input name="lat_boys_and_male_teacher" id="lat_boys_and_male_teacher" placeholder="" value="" min="0" type="number"></td>
+                        <td width="5" align="left">&nbsp;</td>
+                    </tr> 
              </table>
              <table id="tbl_num_of_tap" class="ui-body-d ui-shadow table-stripe ui-responsive" data-role="table" data-theme="d"  data-mode="display:none" style="cell-spacing:0px;">
                   
@@ -642,7 +656,7 @@
             
             <ul id="schBudgetUl" data-role="listview" data-inset="true" >
             		<br/>
-                    <li style="background-color:#F2F2F2;">Does the school maintain/has budget for O&M of WASH Facilities?<sup class="reqField">*</sup> </li>
+                    <li style="background-color:#F2F2F2; word-wrap:break-word!important; white-space:normal!important;">Does the school maintain/has budget for O&M of WASH Facilities?<sup class="reqField">*</sup> </li>
                     <li class="ui-field-contain">
                         <fieldset data-role="controlgroup" data-type="horizontal" onchange="chkBudget();" >
                             <input type="radio" name="sch_badget" id="sch_badget_y" value="YES">
@@ -666,17 +680,17 @@
                     <tr >
                         <td width="100%" style="vertical-align:middle;" colspan="2">Starting date<sup class="reqField">*</sup>							
 							 <div class="ui-grid-d">
-								<div class="ui-block-a" style="width:30%;" >
-                                		<select name="st_of_rehab_y" id="st_of_rehab_y" data-native-menu="false" >
-                                        	<option value="">Select Year</option>
+								<div class="ui-block-a" style="width:33%;"  >
+                                		<select name="st_of_rehab_y" id="st_of_rehab_y" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Year</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                         </select>                                		                                								
 								</div>
-                                <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-c" style="width:30%;">
-                                		<select class="inMonth" name="st_of_rehab_m" id="st_of_rehab_m" data-native-menu="false" >
-                                        	<option value="">Select Month</option>
+                                <!--<div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+								<div class="ui-block-b" style="width:33%;">
+                                		<select class="inMonth" name="st_of_rehab_m" id="st_of_rehab_m" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Month</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -692,11 +706,11 @@
                                         </select>
 								  										
 								</div>
-                                <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-e" style="width:30%;" >
+                                <!--<div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+								<div class="ui-block-c" style="width:33%;" >
                                 		
-                                		<select name="st_of_rehab_d" id="st_of_rehab_d" data-native-menu="false" >
-                                        	<option value="">Select Day</option>
+                                		<select name="st_of_rehab_d" id="st_of_rehab_d" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Day</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -739,17 +753,17 @@
                     <tr>
                         <td width="100%" style="vertical-align:middle;" colspan="2">Completion Date<sup class="reqField">*</sup>				
                             <div class="ui-grid-d">
-								<div class="ui-block-a" style="width:30%;">
-                                		<select name="schWash_conp_y" id="schWash_conp_y" data-native-menu="false" >
-                                        	<option value="">Select Year</option>
+								<div class="ui-block-a" style="width:33%;">
+                                		<select name="schWash_conp_y" id="schWash_conp_y" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Year</option>
                                             <option value="2015">2015</option>
                                             <option value="2016">2016</option>
                                         </select>                                		                                								
 								</div>
-                                <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-c" style="width:30%;">
-                                		<select class="inMonth" name="schWash_conp_m" id="schWash_conp_m" data-native-menu="false" >
-                                        	<option value="">Select Month</option>
+                                <!--<div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+								<div class="ui-block-c" style="width:33%;">
+                                		<select class="inMonth" name="schWash_conp_m" id="schWash_conp_m" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Month</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -765,11 +779,11 @@
                                         </select>
 								  										
 								</div>
-                                <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-								<div class="ui-block-e" style="width:30%;">
+                                <!--<div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+								<div class="ui-block-e" style="width:33%;">
                                 		
-                                		<select name="schWash_conp_d" id="schWash_conp_d" data-native-menu="false" >
-                                        	<option value="">Select Day</option>
+                                		<select name="schWash_conp_d" id="schWash_conp_d" data-native-menu="false" data-mini="true" >
+                                        	<option value="">Day</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
                                             <option value="03">03</option>
@@ -843,17 +857,17 @@
                 <li class="ui-field-contain" style="background-color:#F2F2F2; font-weight:bold;">Date of declaration/certification<sup class="reqField">*</sup></li>
                 <li class="ui-field-contain">
                 	 <div class="ui-grid-d">
-                        <div class="ui-block-a" style="width:30%;">
-                                <select name="dec_or_cer_y" id="dec_or_cer_y" data-native-menu="false" >
-                                    <option value="">Select Year</option>
+                        <div class="ui-block-a" style="width:33%;">
+                                <select name="dec_or_cer_y" id="dec_or_cer_y" data-native-menu="false" data-mini="true" >
+                                    <option value="">Year</option>
                                     <option value="2015">2015</option>
                                     <option value="2016">2016</option>
                                 </select>                                		                                								
                         </div>
-                        <div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-                        <div class="ui-block-c" style="width:30%;">
-                                <select class="inMonth" name="dec_or_cer_m" id="dec_or_cer_m" data-native-menu="false" >
-                                    <option value="">Select Month</option>
+                        <!--<div class="ui-block-b" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+                        <div class="ui-block-b" style="width:30%;">
+                                <select class="inMonth" name="dec_or_cer_m" id="dec_or_cer_m" data-native-menu="false" data-mini="true" >
+                                    <option value="">Month</option>
                                     <option value="01">01</option>
                                     <option value="02">02</option>
                                     <option value="03">03</option>
@@ -869,11 +883,11 @@
                                 </select>
                                                                 
                         </div>
-                        <div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>
-                        <div class="ui-block-e" style="width:30%;" >
+                        <!--<div class="ui-block-d" style="width:5%; padding:1%;">&nbsp;/&nbsp;</div>-->
+                        <div class="ui-block-c" style="width:30%;" >
                                 
-                                <select name="dec_or_cer_d" id="dec_or_cer_d" data-native-menu="false" >
-                                    <option value="">Select Day</option>
+                                <select name="dec_or_cer_d" id="dec_or_cer_d" data-native-menu="false" data-mini="true" >
+                                    <option value="">Day</option>
                                     <option value="01">01</option>
                                     <option value="02">02</option>
                                     <option value="03">03</option>
