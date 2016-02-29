@@ -1627,7 +1627,7 @@ if (localStorage.achPlanSector=="Sanitation" || localStorage.achPlanSector=="Han
 				
 				//alert(apipath+'checkOdfStatus?cid=CARE&mobile_no='+localStorage.mobile_no+'&syncCode='+localStorage.sync_code+'&achWardNew='+achWardNew+'&achCommunity='+achCommunity+'&achOdfStatus='+achOdfStatus);
 				
-				$.ajax({
+				/*$.ajax({
 						type: 'POST',
 						url:apipath+'checkOdfStatus?cid=CARE&mobile_no='+localStorage.mobile_no+'&syncCode='+localStorage.sync_code+'&achWardNew='+achWardNew+'&achCommunity='+achCommunity+'&achOdfStatus='+achOdfStatus,
 						   
@@ -1647,10 +1647,11 @@ if (localStorage.achPlanSector=="Sanitation" || localStorage.achPlanSector=="Han
 				
 				
 						   }
-				});
+				});*/
 			
 			
-			
+				var url="#inPhoto";
+				$.mobile.navigate(url);
 			
 			/*var ach_plan_id=$("input[name='activity_select']:checked").val();
 			//alert(ach_plan_id);						
@@ -1866,11 +1867,11 @@ function achiveDataSave(){
 			$("#btn_ach_submit").show();
 		}else{
 		
-			if(latitude==0 || longitude==0){
+			/*if(latitude==0 || longitude==0){
 				$(".errorChk").text("Please confirm your location ");
 				$("#btn_ach_save").show();
 				$("#btn_ach_submit").show();
-			}else{
+			}else{*/
 				
 					
 				//achivementSave=achPlanId+'fdfd'+achCBOid+'fdfd'+achID+'fdfd'+achPopulation+'fdfd'+achHousehold+'fdfd'+achMale+'fdfd'+achFemale+'fdfd'+achGirlsUnder+'fdfd'+achBoysUnder+'fdfd'+achGirls+'fdfd'+achBoys+'fdfd'+achDapMale+'fdfd'+achDapFemale+'fdfd'+achPoorA+'fdfd'+achPoorB+'fdfd'+achPoorC+'fdfd'+achPoorEx+'fdfd'+achEthMale+'fdfd'+achEthFemale+'fdfd'+achServiceRecpt+'fdfd'+achPlanActivities+'fdfd'+achPhoto+'fdfd'+startDt+'fdfd'+latitude+'fdfd'+longitude+'fdfd'+achWord+'fdfd'+achHndEvent+'fdfd'+achCluster+'fdfd'+achLatType+'fdfd'+achComDate+'fdfd'+achWpTech+'fdfd'+achWpComDate		
@@ -2104,7 +2105,7 @@ function achiveDataSave(){
 						}
 				}
 			}
-		}
+		/*}*/
 	}
 
 function deleteAchReview(){	
@@ -2527,10 +2528,10 @@ function achiveDataSubmit(){
 				$(".errorChk").text("Please confirm Photo ");
 				$("#btn_ach_submit").show();
 			}else{		
-				if(latitude==0 || longitude==0){
+				/*if(latitude==0 || longitude==0){
 					$(".errorChk").text("Please confirm your location ");
 					$("#btn_ach_submit").show();
-				}else{				
+				}else{*/				
 					if (localStorage.achPlanId==''){
 						$(".errorChk").text("New records not available");
 						$("#btn_ach_submit").show();
@@ -2543,7 +2544,7 @@ function achiveDataSubmit(){
 						}
 						
 					}
-				}//end check location
+				/*}*///end check location
 			}//chk photo
 		}
 	}
@@ -2731,7 +2732,7 @@ function uploadPhotoAch(imageURI, imageName) {
     options.params = params;
 
     var ft = new FileTransfer();
-	ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/care_upload/fileUploader/"),winAch,fail,options);
+    ft.upload(imageURI, encodeURI("http://e4.businesssolutionapps.com/mrepimage/care_upload/fileUploader/"), winAch, fail, options);
 	//ft.upload(imageURI, encodeURI("http://127.0.0.1:8000/welcome/wab_sync/fileUploader/"),winAch,fail,options);
 	
 }
