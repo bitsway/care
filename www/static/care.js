@@ -403,6 +403,7 @@ $(document).ready(function(){
 			}						
 								
 		}else if(localStorage.achPlanSector=="CommunityODF"){
+			$("#btn_take_pic").hide();
 			$("#achCommunity").show();
 			$("#myImageA").hide();
 			$("#btn_ach_lat_long").hide();			
